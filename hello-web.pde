@@ -25,7 +25,24 @@ noStroke();
 fill(255, 227, 224);
 ellipse(faceX+175, faceY+50, 300, 75); //mouth
 
-stroke(0, 0, 0);
-fill(60, 95, 142);
-rect(900, 400, 100, 100);
 
+
+
+
+
+var catX = 900;
+var catY = 400;
+var eye = loadImage("eye.png");
+
+noStroke()
+fill(60, 95, 142);
+rect(catX, catY, 100, 100);
+triangle(catX+10, catY, catX+40, catY, catX+25, catY-20);
+triangle(catX+60, catY, catX+90, catY, catX+75, catY-20);
+stroke(0, 0, 0);
+strokeWeight(3);
+line(catX+30, catY+75, catX+70, catY+65);
+
+
+//image not working, only throws error if debugger right here
+image(eye, catX, catY);
